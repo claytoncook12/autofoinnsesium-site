@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* navbar */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #111;
+}
+
+/* body */
+body {  
+    height: 100vh;
+    margin: 0;
+    font-family: 'Architects Daughter', sans-serif;
+}
+
+.footer {
+    text-align: center;
+    color: #006e0f;
+}
+
+.self-link {
+    color: #00d41c; 
+}

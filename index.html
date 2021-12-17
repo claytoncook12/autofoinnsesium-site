@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/player.css">
+    <title>Auto Foinn Sesium 1</title>
+    <link rel="shortcut icon" type="image/svg" href="images/cc_cog.svg"/>
+
+</head>
+<body>
+    <div class="content">
+    
+
+    <div class="music-container">
+        <h1 class="main-title">Auto Foinn Seisuim 1</h1>
+        <div class="img-container">
+            <img src="images/foinn_seisium_1.jfif" alt="music-cover" id="cover">
+        </div>
+
+        <div class="music-info">
+            <div class="cd-set-number">
+                CD Set Number &nbsp;<span id="set-number"></span>
+            </div>
+            <div id="title"></div>
+            <div class="progress-container">
+                <div class="progress"></div>
+            </div>
+        </div>
+
+        <audio src="" id="audio" preload="auto"></audio>
+
+        <div class="navigation">
+            <button id="loop" class="action-btn">
+                <i class="fas fa-redo"></i>
+            </button>
+            <button id="prev" class="action-btn">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn action-btn-big">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="action-btn">
+                <i class="fas fa-forward"></i>
+            </button>
+            <button id="shuffle" class="action-btn">
+                <i class="fas fa-random"></i>
+            </button>
+        </div>
+        
+        <div class="controls">
+            Controls:
+            <div class="speed-control">
+                <div class="reading speed-reading">
+                    Speed: &nbsp; <span id="speed-display"></span>X
+                </div>
+                <div class="slider-container speed-slider-container">
+                    <input type="range" min="0.3" max="1.2" value="1.0" step="0.05" class="slider speed-slider" id="speedRange">
+                </div> 
+            </div>
+            <div class="wait-control">
+                <div class="reading wait-reading">
+                    Wait: &nbsp; <span id="wait-display"></span> &nbsp; seconds
+                </div>
+                <div class="reading description">
+                    <span class="minor-text">(before playing)</span>
+                </div>
+                <div class="slider-container wait-slider-container">
+                    <input type="range" min="0" max="5" value="0" step="1" class="slider wait-slider" id="waitRange">
+                </div> 
+            </div>     
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <p>Website by <a class="self-link" href="http://www.claytoncook.com/" target="_blank">claytoncook12
+        </a> - 2021</p>
+      </div>
+    </div>
+
+    <!-- Javascript for Song Data and Audio Player -->
+    <script type="text/javascript" language="javascript" src="js/sets_data.js"></script>
+    <script src="js/player.js"></script>
+
+</body>
+</html>
