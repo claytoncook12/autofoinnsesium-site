@@ -158,3 +158,14 @@ body {
 .slider:hover {
     opacity: 1; /* Fully shown on mouse-over */
 }
+
+/* Download Link for Audio Files */
+.download-zip {
+    margin: 10px 0px;
+    text-align: center;
+}
+
+.download-zip-a {
+    color: rgb(129, 129, 129);
+    text-decoration: none;
+}
