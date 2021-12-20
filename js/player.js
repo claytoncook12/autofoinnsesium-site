@@ -8,6 +8,8 @@ const progressContainer = document.querySelector('.progress-container')
 const title = document.querySelector('#title')
 const cd_set_number = document.querySelector('#set-number')
 const cover = document.querySelector('#cover')
+const tempo_beat = document.querySelector('#count-in-note')
+const tempo = document.querySelector('#count-in-tempo')
 const sliderSpeed = document.getElementById("speedRange");
 const outputSpeed = document.getElementById("speed-display");
 const sliderWait = document.getElementById("waitRange");
@@ -28,8 +30,15 @@ loadSong(sets_data[songIndex]);
 function loadSong(song) {
     title.innerText = song['fields']['title'];
     cd_set_number.innerText = song['fields']['cd_set_number'];
+    tempo_beat.innerText = song['fields']['count_in_note'];
+    tempo.innerText = song['fields']['count_in_tempo'];
     audio.src = song['fields']["audio_file"];
 }
+
+function updateTempoReading() {
+    // Update Tempo Reading
+    tempo.innerHTML = parseFloat(parseFloat(sliderSpeed.value) * sets_data[songIndex]['fields']['count_in_tempo']).toFixed(0);
+};
 
 function playSong() {
     // Update Buttons
@@ -66,6 +75,9 @@ function prevSong() {
 
         // Set Speed From Slider
         audio.playbackRate = sliderSpeed.value;
+
+        // Update Tempo Reading
+        updateTempoReading()
     }
 }
 
@@ -85,6 +97,9 @@ function nextSong() {
 
         // Set Speed From Slider
         audio.playbackRate = sliderSpeed.value;
+
+        // Update Tempo Reading
+        updateTempoReading()
 
         playSong()
     }
@@ -151,6 +166,7 @@ audio.playbackRate = sliderSpeed.value;
 sliderSpeed.oninput = function() {
     outputSpeed.innerHTML = parseFloat(this.value).toFixed(2);
     audio.playbackRate = this.value;
+    tempo.innerHTML = parseFloat(parseFloat(this.value) * sets_data[songIndex]['fields']['count_in_tempo']).toFixed(0);
 }
 
 // Next Song on Audio End
