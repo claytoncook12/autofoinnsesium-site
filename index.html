@@ -8,6 +8,7 @@
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/info-modal.css">
     <title>Auto Foinn Seisiún 1</title>
     <link rel="shortcut icon" type="image/svg" href="images/cc_cog.svg"/>
 
@@ -17,7 +18,7 @@
     
 
     <div class="music-container">
-        <div class="float-right">
+        <div id="modalBtn" class="float-right">
             <i class="fas fa-info-circle"></i>
         </div>
         
@@ -88,9 +89,36 @@
       </div>
     </div>
 
+    <!-- The Information Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="model-title">
+            Info
+        </div>
+        <p>
+            Been wanting a tool to practice the foinn seisiun materials and didn't
+            see much to practice specifically those tune sets so I built something.
+            Hopefully this is as useful for you practicing as it is for mine.
+        </p>
+        
+        <div class="model-title">
+            Donate?
+        </div>
+        <p>
+            Send me a few dollars on Paypal.<br>
+            <a href="https://paypal.me/claytoncook12?country.x=US&locale.x=en_US" target="_blank">ClaytonCook12</a>
+        </p>
+        </div>
+    
+    </div>
+
     <!-- Javascript for Song Data and Audio Player -->
     <script type="text/javascript" language="javascript" src="js/sets_data.js"></script>
     <script src="js/player.js"></script>
+    <script src="js/info-modal.js"></script>
 
 </body>
 </html>
