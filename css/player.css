@@ -1,5 +1,8 @@
 body {
+    height: 100%;
+    width: 100%;
     background-image: linear-gradient(0deg, #ffffff, #006e0f 200%);
+    background-attachment: fixed;
 }
 
 /* Buttons */
